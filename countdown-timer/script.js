@@ -1,10 +1,9 @@
-
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minsEl = document.getElementById("mins");
 const secondsEl = document.getElementById("seconds");
 
-const newYears = "1 Jan 2022";
+const newYears = "Dec 31 2021";
 
 function countdown() {
     const newYearsDate = new Date(newYears);
@@ -12,7 +11,7 @@ function countdown() {
 
     const totalSeconds = (newYearsDate - currentDate) / 1000;
 
-    const days = Math.floor(totalSeconds / 3600 / 24);
+    const days = Math.floor(totalSeconds / 3600 / 24); //3600 seconds and 24 hours
     const hours = Math.floor(totalSeconds / 3600) % 24;
     const mins = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
